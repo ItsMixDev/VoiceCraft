@@ -100,11 +100,27 @@ Public Class SpeechRecognition
             sre = New SpeechRecognitionEngine(ci)
             sre.LoadGrammar(g)
         Catch ex As Exception
-            If MessageBox.Show(String.Format(Form1.resources.GetString("Msg_10"), ci.Name), "VoiceCraft", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) = DialogResult.OK Then
-                Process.Start("https://www.microsoft.com/en-us/download/details.aspx?id=24139")
-            End If
-            AppOutput.Log(AppOutput.resources.GetString("Output_3"))
-            Return False
+            Try
+                If MessageBox.Show(String.Format(Form1.resources.GetString("Msg_10"), ci.Name), "VoiceCraft", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) = DialogResult.OK Then
+                    Form1.Enabled = False
+                    FileManager.Download(FileManager.PackagesLink & "MSSpeech_SR_" & ci.Name & "_TELE.msi")
+                    sre = New SpeechRecognitionEngine(ci)
+                    sre.LoadGrammar(g)
+                    Form1.Enabled = True
+                    Form1.Select()
+                Else
+                    Throw New Exception("Canceled")
+                End If
+            Catch exeption As Exception
+                If Not exeption.Message = "Canceled" Then
+                    MsgBox(Form1.resources.GetString("Msg_14"), vbCritical)
+                    'MsgBox(exeption.ToString, vbCritical)
+                    Form1.Enabled = True
+                    Form1.Select()
+                End If
+                AppOutput.Log(AppOutput.resources.GetString("Output_3"))
+                Return False
+            End Try
         End Try
         Try
             sre.SetInputToDefaultAudioDevice()

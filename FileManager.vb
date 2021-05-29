@@ -1,5 +1,5 @@
 ﻿Imports System.IO
-
+Imports System.Net
 
 Public Class FileManager
 
@@ -67,5 +67,21 @@ Public Class FileManager
         End Try
         Return False
     End Function
+
+    Public RuntimeLink As String = "https://github.com/ItsMixDev/VoiceCraft/raw/master/Microsoft%20Speech%20Recognition/Microsoft%20Speech%20Platform%20-%20Server%20Runtime%20(x86).msi"
+    Public PackagesLink = "https://github.com/ItsMixDev/VoiceCraft/raw/master/Microsoft%20Speech%20Recognition/Microsoft%20Speech%20Platform%20-%20Server%20Runtime%20Languages/"
+
+    Public Sub Download(fileName As String)
+        AppOutput.Log(String.Format(AppOutput.resources.GetString("Output_8"), fileName))
+        Try
+            Dim filePath As String = Path.Combine(My.Computer.FileSystem.SpecialDirectories.Temp, fileName.GetHashCode & ".msi")
+            Dim wClient As New WebClient
+            wClient.DownloadFile(New Uri(fileName), filePath)
+            Process.Start(filePath).WaitForExit()
+            File.Delete(filePath)
+        Catch ex As Exception
+            AppOutput.Log(AppOutput.resources.GetString("Output_9"))
+        End Try
+    End Sub
 
 End Class

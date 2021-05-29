@@ -11035,20 +11035,22 @@
 		<value>Ошибка: не удалось считать данные выбранного файла!</value>
 </data>
 <data name="Msg_10" xml:space="preserve">
-		<value>Ошибка: отсутсвует необходимый языковой пакет - MSSpeech_SR_{0}_TELE! Вы можете скачать его с официального сайта www.microsoft.com и повторить попытку после установки.
-
-Перейти в браузер?</value>
+		<value>Ошибка: отсутсвует необходимый языковой пакет - MSSpeech_SR_{0}_TELE! Хотите ли вы загрузить его из Интернета?</value>
 </data>
 <data name="Msg_11" xml:space="preserve">
-		<value>Ошибка: необходимо установить Microsoft Server Speech Platform Runtime (x86)! Вы можете скачать его с официального сайта www.microsoft.com и перезапустить VoiceCraft после установки.
-
-Перейти в браузер?</value>
+		<value>Ошибка: необходимо установить Microsoft Server Speech Platform Runtime (x86)! Хотите ли вы загрузить его из Интернета?</value>
 </data>
 <data name="Msg_12" xml:space="preserve">
 		<value>Ошибка: не удалось получить доступ к микрофону!</value>
 </data>
 <data name="Msg_13" xml:space="preserve">
 		<value>Ошибка: ключа управления "{0}" не существует!</value>
+</data>
+<data name="Msg_14" xml:space="preserve">
+		<value>Ошибка: не удалось установить необходимый языковой пакет!</value>
+</data>
+<data name="Msg_15" xml:space="preserve">
+		<value>Ошибка: установка не удалась!</value>
 </data>
 <data name="InspectorTitle" xml:space="preserve">
 		<value>Просмотр {0}</value>

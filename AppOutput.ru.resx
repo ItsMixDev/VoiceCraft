@@ -5186,4 +5186,10 @@
 	<data name="Output_7" xml:space="preserve">
 			<value>Файл сохранён: {0}</value>
 	</data>
+	<data name="Output_8" xml:space="preserve">
+			<value>Скачивание файла: {0}</value>
+	</data>
+	<data name="Output_9" xml:space="preserve">
+			<value>Не удалось скачать файл!</value>
+	</data>
 </root>

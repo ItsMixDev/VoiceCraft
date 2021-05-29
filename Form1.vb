@@ -8,9 +8,8 @@ Public Class Form1
     Private FileManager As New FileManager
     Private SpeechRecognition
 
-    Private CultureNames As String() = {"ca-ES", "da-DK", "de-DE", "en-AU", "en-CA", "en-GB", "en-IN", "en-US", "es-ES", "es-MX",
-        "fi-FI", "fr-CA", "fr-FR", "it-IT", "ja-JP", "ko-KR", "nb-NO", "nl-NL", "pl-PL", "pt-BR", "pt-PT", "ru-RU", "sv-SE", "zh-CN",
-        "zh-HK", "zh-TW"}
+    Private CultureNames As String() = {"de-DE", "en-GB", "en-US", "es-ES", "es-MX",
+        "fr-CA", "fr-FR", "it-IT", "ja-JP", "ko-KR", "pt-BR", "ru-RU", "zh-CN", "zh-TW"}
 
     Private ActionNames As String() = {"Forward", "Back", "Sneak", "Jump", "Mine", "Eat", "Interact", "Attack", "StopAll", "Up", "BigUp",
         "Down", "BigDown", "Left", "BigLeft", "Right", "BigRight", "Drop", "DropAll", "OpenInventory", "Quit",
@@ -23,10 +22,19 @@ Public Class Form1
         Try
             SpeechRecognition = New SpeechRecognition
         Catch ex As Exception
-            If MessageBox.Show(resources.GetString("Msg_11"), "VoiceCraft", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) = DialogResult.OK Then
-                Process.Start("https://www.microsoft.com/en-us/download/details.aspx?id=16789")
-            End If
-            End
+            Try
+                If MessageBox.Show(resources.GetString("Msg_11"), "VoiceCraft", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) = DialogResult.OK Then
+                    FileManager.Download(FileManager.RuntimeLink)
+                    SpeechRecognition = New SpeechRecognition
+                Else
+                    Throw New Exception("Canceled")
+                End If
+            Catch exeption As Exception
+                If Not exeption.Message = "Canceled" Then
+                    MsgBox(resources.GetString("Msg_15"), vbCritical)
+                End If
+                End
+            End Try
         End Try
         'Continue loading
         For Each n As String In CultureNames

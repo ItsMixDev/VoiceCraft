@@ -5266,4 +5266,10 @@
 	<data name="Output_7" xml:space="preserve">
 			<value>File saved: {0}</value>
 	</data>
+	<data name="Output_8" xml:space="preserve">
+			<value>Downloading file: {0}</value>
+	</data>
+	<data name="Output_9" xml:space="preserve">
+			<value>Failed to download!</value>
+	</data>
 </root>

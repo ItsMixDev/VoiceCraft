@@ -12104,47 +12104,49 @@
   </data>
       <!-- Strings --> 
 <data name="Msg_1" xml:space="preserve">
-		<value>Error: the "{0}" file does not exist in the packages folder!</value>
+		<value>Error: The "{0}" file does not exist in the packages folder!</value>
 </data>
 <data name="Msg_2" xml:space="preserve">
-		<value>Error: the specified packages folder on the path "{0}" does not exist!</value>
+		<value>Error: The specified packages folder on the path "{0}" does not exist!</value>
 </data> 
 <data name="Msg_3" xml:space="preserve">
 		<value>Stop recognition first!</value>
 </data>
 <data name="Msg_4" xml:space="preserve">
-		<value>Error: invalid path specified!</value>
+		<value>Error: Invalid path specified!</value>
 </data>
 <data name="Msg_5" xml:space="preserve">
-		<value>Error: unable to read "{0}" data!</value>
+		<value>Error: Unable to read "{0}" data!</value>
 </data>
 <data name="Msg_6" xml:space="preserve">
 		<value>Save current changes for "{0}"?</value>
 </data>
 <data name="Msg_7" xml:space="preserve">
-		<value>Warning: invalid character found!</value>
+		<value>Warning: Invalid character found!</value>
 </data>
 <data name="Msg_8" xml:space="preserve">
-		<value>Error: unable to save data, check if the values are correct!</value>
+		<value>Error: Unable to save data, check if the values are correct!</value>
 </data>
 <data name="Msg_9" xml:space="preserve">
-		<value>Error: unable to read this file data!</value>
+		<value>Error: Unable to read this file data!</value>
 </data>
 <data name="Msg_10" xml:space="preserve">
-		<value>Error: A required language pack is missing - MSSpeech_SR_{0}_TELE! You can download it from the official www.microsoft.com website and try again after installation.
-
-Open in browser?</value>
+		<value>Error: A required language pack is missing - MSSpeech_SR_{0}_TELE! Do you want to download it from the Internet?</value>
 </data>
 <data name="Msg_11" xml:space="preserve">
-		<value>Error: Microsoft Server Speech Platform Runtime (x86) must be installed to continue! You can download it from the official www.microsoft.com website and restart VoiceCraft after installation.
-
-Open in browser?	</value>
+		<value>Error: Microsoft Server Speech Platform Runtime (x86) is not installed! Do you want to download it from the Internet?</value>
 </data>
 <data name="Msg_12" xml:space="preserve">
-		<value>Error: unable to access microphone!</value>
+		<value>Error: Unable to access microphone!</value>
 </data>
 <data name="Msg_13" xml:space="preserve">
 		<value>Error: "{0}" is invalid control key!</value>
+</data>
+<data name="Msg_14" xml:space="preserve">
+		<value>Error: Failed to install required language pack!</value>
+</data>
+<data name="Msg_15" xml:space="preserve">
+		<value>Error: Installation failed!</value>
 </data>
 <data name="InspectorTitle" xml:space="preserve">
 		<value>Inspecting {0}</value>
