@@ -9,8 +9,8 @@ This application lets you play Minecraft in a new way! Now the keyboard and mous
 1. Download the latest release from https://github.com/ItsMixDev/VoiceCraft/releases
 2. Extract installed zip into a folder
 3. VoiceCraft is based on the Microsoft Speech Recognition Platform, so you need to install the following stuff too:
-   - [x] [Microsoft Speech Platform - Server Runtime (x86)](https://www.microsoft.com/en-us/download/details.aspx?id=16789)
-   - [x] [Microsoft Speech Platform - Server Runtime Languages](https://www.microsoft.com/en-us/download/details.aspx?id=24139) <-- Install `MSSpeech_SR_en-US_TELE.msi` or `MSSpeech_SR_ru-RU_TELE.msi` if you speak Russian. 
+   - [x] [Microsoft Speech Platform - Server Runtime (x86)](https://github.com/ItsMixDev/VoiceCraft/raw/master/Microsoft%20Speech%20Recognition/Microsoft%20Speech%20Platform%20-%20Server%20Runtime%20(x86).msi)
+   - [x] [Microsoft Speech Platform - Server Runtime Languages](https://github.com/ItsMixDev/VoiceCraft/tree/master/Microsoft%20Speech%20Recognition/Microsoft%20Speech%20Platform%20-%20Server%20Runtime%20Languages) <-- Install `MSSpeech_SR_en-US_TELE.msi` or `MSSpeech_SR_ru-RU_TELE.msi` if you speak Russian. 
 4. Launch the Minecraft, then go to `Options > Controls > Mouse Settings`, and set the `Raw Input: ON` as in the example:
 
    ![Guide](https://user-images.githubusercontent.com/83579961/117535465-8dc53e00-affe-11eb-9b0e-bc48878f19cd.png)
@@ -27,8 +27,8 @@ If your antivirus software is blocking the VoiceCraft application, this may be b
 
 2. **I can see errors when I'm launching the app and/or starting speech recognition. What do I do?**
 
-First of all, you need to check if the `Microsoft Speech Platform - Server Runtime (x86)` is installed on your computer, otherwise, you can download and install it from [here](https://www.microsoft.com/en-us/download/details.aspx?id=16789). If you can't start speech recognition, read the error message and try to install a required language pack
-from [here](https://www.microsoft.com/en-us/download/details.aspx?id=24139).
+First of all, you need to check if the `Microsoft Speech Platform - Server Runtime (x86)` is installed on your computer, otherwise, you can download and install it from [here](https://github.com/ItsMixDev/VoiceCraft/raw/master/Microsoft%20Speech%20Recognition/Microsoft%20Speech%20Platform%20-%20Server%20Runtime%20(x86).msi). If you can't start speech recognition, read the error message and try to install a required language pack
+from [here](https://github.com/ItsMixDev/VoiceCraft/tree/master/Microsoft%20Speech%20Recognition/Microsoft%20Speech%20Platform%20-%20Server%20Runtime%20Languages).
 
 3. **How can I customize an existing or write my own voice commands?**
 
